@@ -8,6 +8,8 @@ So, in a web analytics application I want to store metrics for any given page. A
 
 `page_00000000000000034343_293819312323`
 
+Notice how the ID has been padded with zero to make it the same length for all rows. Without padding IDs, querying by range will not be possible, so this is very important!
+
 The stats-record stored at that location is an aggregation of several metrics for the past hour, e.g:
 
 ```javascript
