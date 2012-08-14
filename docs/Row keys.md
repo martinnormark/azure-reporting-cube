@@ -1,12 +1,14 @@
 To avoid using `Timestamp` in queries, which results in a [full table scan] [1], we need to make the row key some sort of timestamp.
 
-Since this is aggregated data, it should indicate the endtime of the aggregation in UTC ticks e.g. `293819312323`.
+Since this is aggregated data, it should indicate the endtime of the aggregation (per hour) in UTC ticks e.g. `293819312323`.
+
+To make space for an extra digit, prefix the UTC ticks with a zero, which means we should use `0293819312323` instead.
 
 But since we also want to indicate what any particular stats-record belongs to, we need to prefix the UTC ticks timestamp with object type and object id, to make it refer to another entity in an application.
 
-So, in a web analytics application I want to store metrics for any given page. A page's object type is `page` with an ID of e.g. `34343` which makes the row key for the stats-record ending in UTC ticks of `293819312323` look like this:
+So, in a web analytics application I want to store metrics for any given page. A page's object type is `page` with an ID of e.g. `34343` which makes the row key for the stats-record ending in UTC ticks of `0293819312323` look like this:
 
-`page_00000000000000034343_293819312323`
+`page_00000000000000034343_0293819312323`
 
 Notice how the ID has been padded with zero to make it the same length for all rows. Without padding IDs, querying by range will not be possible, so this is very important!
 
@@ -15,6 +17,8 @@ The stats-record stored at that location is an aggregation of several metrics fo
 ```javascript
 {
     'ObjectType': 'page',
+    'DateFromUtc': new Date(293819412323),
+    'DateToUtc': new Date(293819312323),
     'ObjectId': 34343,
     'PageViews': 54323,
     'Visits': 49834,
