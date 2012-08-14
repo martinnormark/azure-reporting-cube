@@ -19,7 +19,7 @@ With the description of the concept, bits of a small POC or tests will be build 
 ## Concepts
 
 * [Data model of a simple web analytics app] (https://github.com/martinnormark/azure-reporting-cube/blob/master/docs/Data%20model.md)
-* [From input data, to de-normalized cube] ()
-* [What to use as `PartitionKey`?] (https://github.com/martinnormark/azure-reporting-cube/blob/master/docs/Data%20transformation.md)
+* [From input data, to de-normalized cube] (https://github.com/martinnormark/azure-reporting-cube/blob/master/docs/Data%20transformation.md)
+* [What to use as `PartitionKey`?] (https://github.com/martinnormark/azure-reporting-cube/blob/master/docs/Partition%20keys.md)
 * [What to use as `RowKey`?] (https://github.com/martinnormark/azure-reporting-cube/blob/master/docs/Row%20keys.md)
 * [Querying a range of metrics] (https://github.com/martinnormark/azure-reporting-cube/blob/master/docs/Querying%20metrics.md)
