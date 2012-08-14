@@ -1,0 +1,1 @@
+# Data model of a simple web analytics app
