@@ -18,8 +18,8 @@ The stats-record stored at that location is an aggregation of several metrics fo
 {
     'ObjectType': 'page',
     'ObjectId': 34343,
-    'DateFromUtc': new Date(293819412323),
-    'DateToUtc': new Date(293819312323),
+    'DateFromUtc': '2012-08-14T18:00:00.000Z',
+    'DateToUtc': '2012-08-14T19:00:00.000Z',
     'PageViews': 54323,
     'Visits': 49834,
     'PageViewsPerVisit': 1.09007906,
