@@ -2,7 +2,7 @@ To avoid using `Timestamp` in queries, which results in a [full table scan] [1],
 
 Since this is aggregated data, it should indicate the endtime of the aggregation (per hour) in UTC ticks e.g. `293819312323`.
 
-> Values for UTC ticks in this document are fake!
+*Values for UTC ticks in this document are fake!*
 
 > It is fine to use `DateTime.Ticks` from .Net, but it might not be great to use that as the public querying interface in APIs. JavaScript ticks is probably better, so any API provider could convert the input to .Net's `DateTime.Ticks`.
 
