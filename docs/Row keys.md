@@ -4,7 +4,7 @@ Since this is aggregated data, it should indicate the endtime of the aggregation
 
 > Values for UTC ticks in this document are fake!
 
-> It is fine to use `DateTime.Ticks` from .Net, but it might not be great to use that as the public querying interface in APIs. JavaScript ticks is probably better, so any API provider could convert the input to .Net's `DateTime.Ticks´.
+> It is fine to use `DateTime.Ticks` from .Net, but it might not be great to use that as the public querying interface in APIs. JavaScript ticks is probably better, so any API provider could convert the input to .Net's `DateTime.Ticks`.
 
 To make space for an extra digit, prefix the UTC ticks with a zero, which means we should use `0293819312323` instead.
 
