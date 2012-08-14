@@ -17,9 +17,9 @@ The stats-record stored at that location is an aggregation of several metrics fo
 ```javascript
 {
     'ObjectType': 'page',
+    'ObjectId': 34343,
     'DateFromUtc': new Date(293819412323),
     'DateToUtc': new Date(293819312323),
-    'ObjectId': 34343,
     'PageViews': 54323,
     'Visits': 49834,
     'PageViewsPerVisit': 1.09007906,
